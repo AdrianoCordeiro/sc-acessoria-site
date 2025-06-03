@@ -1,110 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SC Acessoria - Assessoria de Casamentos</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="./fotos/logobranco.jpg" alt="Logo SC Acessoria" width="200">
+            <img src="./fotos/LOGO .png" alt="Logo SC Acessoria" />
         </div>
         <nav>
             <a href="#sobre">Sobre</a>
             <a href="#servicos">Serviços</a>
-            <a href="#portfolio">Portfólio</a>
+            <a href="#portfolio">Galeria</a>
             <a href="#depoimentos">Depoimentos</a>
             <a href="#contato">Contato</a>
         </nav>
     </header>
 
-    <section id="hero">
-        <h2>Tornando Sonhos em Realidade</h2>
-        <p>Planejamos e organizamos seu casamento dos sonhos com carinho e atenção aos detalhes.</p>
+    <!-- Slider -->
+    <section id="hero-slider">
+        <div class="slide active">
+            <img src="./fotos/1.jpg" alt="Casamento 1" />
+        </div>
+        <div class="slide">
+            <img src="./fotos/8.jpeg" alt="Casamento 2" />
+        </div>
+        <div class="slide">
+            <img src="./fotos/14.jpg" alt="Casamento 3" />
+        </div>
+        <div class="slide">
+            <img src="./fotos/13.jpg" alt="Casamento 4" />
+        </div>
+        <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
     </section>
 
     <section id="sobre">
         <h2>Sobre Mim</h2>
-        <p>A SC Assessoria nasceu da paixão por eventos marcantes e memoráveis. Temos como objetivo transformar o seu grande dia em algo mágico, único e inesquecível.</p>
+        <p>
+            Transformar sonhos em realidade sempre foi mais do que um trabalho — é a minha missão. Desde que iniciei minha trajetória na assessoria de casamentos, descobri que meu propósito está em planejar momentos únicos, cheios de significado e emoção.
+        </p>
+        <p>
+            Sou formada em Gestão de Recursos Humanos e estou em processo de graduação em Administração de Empresas, o que me proporciona uma visão completa para cuidar de cada detalhe com estratégia, sensibilidade e organização.
+        </p>
+        <p>
+            Hoje, à frente da SC Assessoria, coloco toda minha paixão, experiência e dedicação a serviço de casais que desejam viver um casamento leve, bem planejado e inesquecível. Cada evento é único, e me orgulho de oferecer uma assessoria personalizada, comprometida e humana — exatamente como esse momento merece ser vivido.
+        </p>
+        <p>
+            Mais do que coordenar eventos, eu realizo histórias. E será um privilégio fazer parte da sua.
+        </p>
     </section>
 
     <section id="servicos">
         <h2>Serviços</h2>
         <ul>
-            <li>Planejamento completo do casamento</li>
-            <li>Gestão de fornecedores</li>
-            <li>Organização do dia do evento</li>
-            <li>Design e decoração</li>
-            <li>Assessoria pré e pós-evento</li>
+            <li>
+                <h3 class="borda"><b>Assessoria completa</b></h3>
+                <ul class="lista-servicos">
+                    <li>- Início e acompanhamento imediato.</li>
+                    <li>- Consultoria e planejamento de custos.</li>
+                    <li>- Indicação dos fornecedores renomados.</li>
+                    <li>- Acesso ao Planner Digital com acompanhamento.</li>
+                    <li>- Acompanhamento na contratação e contato com fornecedores.</li>
+                    <li>- Visitas presenciais inclusas para acompanhamentos (espaços, degustações, entre outros).</li>
+                    <li>- Confirmação de presença ativa.</li>
+                    <li>- Visitas técnicas com os fornecedores para alinhamentos.</li>
+                    <li>- Acompanhamento na prova final do vestido da noiva.</li>
+                    <li>- Assessoria e coordenação no dia do casamento.</li>
+                </ul>
+            </li>
         </ul>
     </section>
 
     <section id="portfolio">
-        <h2>Portfólio</h2>
+        <h2>Galeria</h2>
         <div class="galeria">
-            <!-- Fotos -->
+            <!-- Imagens -->
             <div class="galeria-item">
-                <img src="./fotos/1.jpg" alt="Casamento 1">
-            </div>
-            <div class="galeria-item">
-                <img src="./fotos/2.webp" alt="Casamento 2">
+                <img src="./fotos/1.jpg" alt="Casamento 1" class="gallery-img" />
             </div>
             <div class="galeria-item">
-                <img src="./fotos/3.avif" alt="Casamento 3">
-            </div>
-              <div class="galeria-item">
-                <img src="./fotos/4.jpg" alt="Casamento 4">
-            </div>
-              <div class="galeria-item">
-                <img src="./fotos/5.webp" alt="Casamento 5">
-            </div>
-              <div class="galeria-item">
-                <img src="./fotos/6.jpg" alt="Casamento 6">
+                <img src="./fotos/10.jpg" alt="Casamento 2" class="gallery-img" />
             </div>
             <div class="galeria-item">
-                <img src="./fotos/7.jpeg" alt="Casamento 7">
+                <img src="./fotos/8.jpeg" alt="Casamento 3" class="gallery-img" />
             </div>
             <div class="galeria-item">
-                <img src="./fotos/8.jpeg" alt="Casamento 8">
+                <img src="./fotos/4.jpg" alt="Casamento 4" class="gallery-img" />
             </div>
-                <div class="galeria-item">
-                <img src="./fotos/9.jpeg" alt="Casamento 9">
+            <div class="galeria-item">
+                <img src="./fotos/11.jpg" alt="Casamento 5" class="gallery-img" />
             </div>
-            <!--Videos-->
-        <div class="galeria">
-    <!-- Vídeo 1 (normal) -->
-    <div class="galeria-item">
-        <video controls>
-            <source src="./videos/Video-1.mp4" type="video/mp4">
-        </video>
-    </div>
+            <div class="galeria-item">
+                <img src="./fotos/6.jpg" alt="Casamento 6" class="gallery-img" />
+            </div>
+            <div class="galeria-item">
+                <img src="./fotos/12.jpg" alt="Casamento 7" class="gallery-img" />
+            </div>
+            <div class="galeria-item">
+                <img src="./fotos/13.jpg" alt="Casamento 8" class="gallery-img" />
+            </div>
+            <div class="galeria-item">
+                <img src="./fotos/14.jpg" alt="Casamento 9" class="gallery-img" />
+            </div>
+            <div class="galeria-item">
+                <img src="./fotos/15.jpg" alt="Casamento 9" class="gallery-img" />
+            </div>
 
-    <!-- Vídeo 3 (normal) -->
-    <div class="galeria-item">
-        <video controls>
-            <source src="./videos/Vídeo-3.mp4" type="video/mp4">
-        </video>
-    </div>
+            <!-- Vídeos -->
+            <div class="galeria-item">
+                <video controls>
+                    <source src="./videos/Video-1.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div class="galeria-item">
+                <video controls>
+                    <source src="./videos/Vídeo-3.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div class="galeria-item">
+                <video controls>
+                    <source src="./videos/5.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div class="galeria-item">
+                <video controls>
+                    <source src="./videos/6.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div class="galeria-item">
+                <video controls>
+                    <source src="./videos/7.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <!-- Vídeos que precisam de rotação -->
+            <div class="galeria-item">
+                <video src="./videos/video-2.mp4" class="rotate-video" controls></video>
+            </div>
+            <div class="galeria-item">
+                <video src="./videos/8.mp4" class="rotate-video" controls></video>
+            </div>
+            <div class="galeria-item">
+                <video src="./videos/9.mp4" class="rotate-video" controls></video>
+            </div>
+        </div>
 
-    <!-- Vídeo 4 (normal) -->
-    <div class="galeria-item">
-        <video controls>
-            <source src="./videos/video-2.mp4" type="video/mp4">
-        </video>
-    </div>
-
-     <!-- Vídeo 2 (rotacionado 90°) -->
-    <div class="video-rotacionado">
-        <video controls>
-            <source src="/videos/Vídeo-4.mp4" type="video/mp4">
-        </video>
-    </div>
-
-</div>
+        <!-- Modal para exibir vídeos rotacionados e imagens -->
+        <div id="mediaModal" class="modal">
+            <span class="close">×</span>
+            <img id="modalImage" style="display: none; max-width: 90vw; max-height: 90vh;" />
+            <video id="modalVideo" controls style="display: none;"></video>
+        </div>
     </section>
 
     <section id="depoimentos">
@@ -112,7 +163,7 @@
         <div id="lista-depoimentos"></div>
         <h3>Deixe seu depoimento</h3>
         <form id="form-depoimento">
-            <input type="text" id="nome" placeholder="Seu nome" required>
+            <input type="text" id="nome" placeholder="Seu nome" required />
             <textarea id="texto" placeholder="Seu depoimento..." required></textarea>
             <button type="submit">Enviar</button>
         </form>
@@ -120,16 +171,15 @@
 
     <section id="contato">
         <h2>Contato</h2>
-        <a href="https://wa.me/5511958381705" class="btn-whatsapp">Fale no WhatsApp</a>
+        <a href="https://wa.me/5511958381705" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">Fale no WhatsApp</a>
     </section>
 
     <footer>
         <div class="social-icons">
-            <a href="https://instagram.com/suelencordeiroassessoria" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/suelen.s.cordeiro" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://wa.me/5511958381705" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/suelencordeiroassessoria" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/suelen.s.cordeiro" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
         </div>
-        <p>© 2025 SC Acessoria</p>
+        <p>© 2023 SC Assessoria - Todos os direitos reservados</p>
     </footer>
 
     <script src="script.js"></script>
