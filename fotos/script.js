@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ...depoimento,
                 data: new Date().toISOString(),
                 status: 'pending',
-                ip: await this.getIP().catch(() => 'unknown')
+                ip: await this.getIP()
             };
 
             const depoimentos = JSON.parse(localStorage.getItem(this.localStorageKey)) || [];
