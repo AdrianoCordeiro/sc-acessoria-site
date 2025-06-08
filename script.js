@@ -19,12 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('#hero-slider .slide');
     const prevBtn = document.querySelector('.slider-btn.prev');
     const nextBtn = document.querySelector('.slider-btn.next');
+    const dots = document.querySelectorAll('.dot');
     let currentSlide = 0;
     let slideInterval;
 
     function showSlide(index) {
         slides.forEach((slide, i) => {
             slide.classList.toggle('active', i === index);
+        });
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
         });
     }
 
@@ -59,6 +63,17 @@ document.addEventListener('DOMContentLoaded', function() {
             startSlider();
         });
 
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                currentSlide = parseInt(dot.dataset.slide);
+                showSlide(currentSlide);
+                stopSlider();
+                startSlider();
+                dots.forEach(d => d.classList.remove('active'));
+                dot.classList.add('active');
+            });
+        });
+
         const slider = document.querySelector('#hero-slider');
         if (slider) {
             slider.addEventListener('mouseenter', stopSlider);
@@ -78,25 +93,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (modal && modalImage && modalVideo && closeModal) {
         galeriaItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const img = item.querySelector('img');
-                const video = item.querySelector('video');
-                
-                if (img) {
-                    modalImage.src = img.src;
-                    modalImage.style.display = 'block';
-                    modalVideo.style.display = 'none';
-                    modalVideo.pause();
-                } else if (video) {
-                    modalVideo.src = video.src;
-                    modalVideo.style.display = 'block';
-                    modalImage.style.display = 'none';
-                    modalVideo.load();
-                    modalVideo.play();
-                }
-                
-                modal.classList.add('active');
-            });
+            const img = item.querySelector('img');
+            const video = item.querySelector('.modal-video'); // Apenas vídeos com classe modal-video
+
+            if (img || video) {
+                item.addEventListener('click', () => {
+                    if (img) {
+                        modalImage.src = img.src;
+                        modalImage.style.display = 'block';
+                        modalVideo.style.display = 'none';
+                        modalVideo.pause();
+                    } else if (video) {
+                        modalVideo.src = video.querySelector('source').src;
+                        modalVideo.style.display = 'block';
+                        modalImage.style.display = 'none';
+                        modalVideo.load();
+                        modalVideo.play();
+                    }
+                    
+                    modal.classList.add('active');
+                });
+            }
         });
 
         closeModal.addEventListener('click', () => {
@@ -117,118 +134,43 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Depoimentos
-    class DepoimentoManager {
-        constructor() {
-            this.localStorageKey = 'sc_assessoria_depoimentos';
-            this.loadDepoimentos();
-            this.setupForm();
+    const depoimentos = [
+        {
+            nome: 'Ana e João',
+            texto: 'A Suélen transformou nosso casamento em um momento mágico! Cada detalhe foi pensado com carinho, e tudo saiu perfeito. Recomendamos de olhos fechados!',
+            data: '2023-10-15'
+        },
+        {
+            nome: 'Mariana e Pedro',
+            texto: 'Profissionalismo e dedicação incríveis! A SC Assessoria fez nosso dia ser inesquecível, com organização impecável e muito amor envolvido.',
+            data: '2023-12-20'
         }
+        // Adicione mais depoimentos aqui conforme receber e aprovar
+    ];
 
-        async loadDepoimentos() {
-            const localDepoimentos = JSON.parse(localStorage.getItem(this.localStorageKey)) || [];
-            this.displayDepoimentos(localDepoimentos);
-        }
+    function displayDepoimentos() {
+        const container = document.getElementById('lista-depoimentos');
+        if (!container) return;
 
-        displayDepoimentos(depoimentos) {
-            const container = document.getElementById('lista-depoimentos');
-            if (!container) return;
-
-            const approved = depoimentos.filter(d => d.status === 'approved');
-
-            if (approved.length === 0) {
-                container.innerHTML = `
-                    <div class="no-depoimentos">
-                        <p>Ainda não há depoimentos. Seja o primeiro a compartilhar sua experiência!</p>
-                    </div>
-                `;
-                return;
-            }
-
-            container.innerHTML = approved.map(depoimento => `
-                <div class="depoimento-item">
-                    <p class="depoimento-author">${depoimento.nome}</p>
-                    <p class="depoimento-text">"${depoimento.texto}"</p>
-                    <span class="depoimento-date">${this.formatDate(depoimento.data)}</span>
+        if (depoimentos.length === 0) {
+            container.innerHTML = `
+                <div class="no-depoimentos">
+                    <p>Ainda não há depoimentos. Seja o primeiro a compartilhar sua experiência!</p>
                 </div>
-            `).join('');
+            `;
+            return;
         }
 
-        formatDate(dateString) {
-            const options = { day: '2-digit', month: 'long', year: 'numeric' };
-            return new Date(dateString).toLocaleDateString('pt-BR', options);
-        }
-
-        async saveDepoimento(depoimento) {
-            depoimento = {
-                ...depoimento,
-                data: new Date().toISOString(),
-                status: 'pending',
-                ip: await this.getIP().catch(() => 'unknown')
-            };
-
-            const depoimentos = JSON.parse(localStorage.getItem(this.localStorageKey)) || [];
-            depoimentos.unshift(depoimento);
-            localStorage.setItem(this.localStorageKey, JSON.stringify(depoimentos));
-            
-            this.showMessage('Obrigado pelo seu depoimento! Ele será publicado após aprovação.', 'success');
-            return true;
-        }
-
-        async getIP() {
-            try {
-                const response = await fetch('https://api.ipify.org?format=json');
-                const data = await response.json();
-                return data.ip || 'unknown';
-            } catch {
-                return 'unknown';
-            }
-        }
-
-        showMessage(text, type) {
-            const existing = document.querySelector('.form-message');
-            if (existing) existing.remove();
-
-            const form = document.getElementById('form-depoimento');
-            if (!form) return;
-
-            const message = document.createElement('div');
-            message.className = `form-message ${type}`;
-            message.textContent = text;
-            
-            form.prepend(message);
-            
-            setTimeout(() => {
-                message.style.opacity = '0';
-                setTimeout(() => message.remove(), 500);
-            }, 5000);
-        }
-
-        setupForm() {
-            const form = document.getElementById('form-depoimento');
-            if (!form) return;
-
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                
-                const nome = document.getElementById('nome').value.trim();
-                const texto = document.getElementById('texto').value.trim();
-                const email = document.getElementById('email').value.trim();
-
-                if (!nome || !texto) {
-                    this.showMessage('Por favor, preencha todos os campos obrigatórios.', 'error');
-                    return;
-                }
-
-                const success = await this.saveDepoimento({ nome, texto, email });
-                if (success) {
-                    form.reset();
-                    this.loadDepoimentos();
-                }
-            });
-        }
+        container.innerHTML = depoimentos.map(dep => `
+            <div class="depoimento-item">
+                <p class="depoimento-author">${dep.nome}</p>
+                <p class="depoimento-text">"${dep.texto}"</p>
+                <span class="depoimento-date">${new Date(dep.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}</span>
+            </div>
+        `).join('');
     }
 
-    new DepoimentoManager();
+    displayDepoimentos();
 
     // Scroll Suave
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

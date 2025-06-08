@@ -1,8 +1,8 @@
 /* Reset e Variáveis */
 :root {
-    --primary-color: #2c5f33;
-    --primary-dark: #2be065;
-    --secondary-color: #7fff29;
+    --primary-color: #3dc54f;
+    --primary-dark: #2ea83e;
+    --secondary-color: #8ba052;
     --dark-color: #3a5028;
     --light-color: #dceedd;
     --text-color: #333;
@@ -159,6 +159,27 @@ nav.active {
     right: 30px;
 }
 
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: var(--primary-color);
+}
+
 /* Seções Comuns */
 section {
     padding: 80px 20px;
@@ -241,7 +262,7 @@ section h2::after {
     content: '✓';
     position: absolute;
     left: 0;
-    color: #6eaa5e;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
@@ -281,9 +302,24 @@ section h2::after {
     transform: scale(1.1);
 }
 
+.galeria-item:not(.modal-video) {
+    cursor: default;
+}
+
+.galeria-item:not(.modal-video):hover {
+    transform: none;
+    box-shadow: var(--shadow);
+}
+
+.galeria-item:not(.modal-video) video:hover {
+    transform: none;
+}
+
 .rotate-video {
     transform: rotate(90deg);
-    transform-origin: center;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* Modal */
@@ -550,10 +586,21 @@ footer {
 }
 
 footer p {
-    color: #ffffff;
     color: #166336;
     font-size: 0.9rem;
     margin-top: 20px;
+}
+
+/* Animações de Scroll */
+.animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Responsivo */
