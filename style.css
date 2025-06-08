@@ -351,8 +351,8 @@ section h2::after {
 
 #modalImage,
 #modalVideo {
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width:  0w;
+    max-height: 0vh;
     object-fit: contain;
 }
 
