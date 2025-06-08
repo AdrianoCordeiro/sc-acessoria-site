@@ -144,7 +144,13 @@ document.addEventListener('DOMContentLoaded', function() {
             nome: 'Mariana e Pedro',
             texto: 'Profissionalismo e dedicação incríveis! A SC Assessoria fez nosso dia ser inesquecível, com organização impecável e muito amor envolvido.',
             data: '2023-12-20'
+        },
+        {
+            nome: 'Mariá Teixeira',
+            texto: 'Deixando aqui a minha experiência com a assessoria da Suellen. Foi tudo impecável, Suellen desde o dia em que contratamos teve uma importância surreal, em contratações, negociações com nossos fornecedores e etc Sempre disponível para resolver os pepinos pré casamento. E no dia do casamento ficou 100% ali cmg, me ajudando, orientando, dizendo o que estava acontecendo, me acalmou E claro ajudou nos mínimos detalhes desse sonho  uma experiência super experiência, e um carinho enorme Mesmo ela fazendo um evento no dia anterior, foi extremamente pontual, chegou sorrindo e agilizando tudo o que era necessário. Me acompanhou até a minha entrada Su você tem um espaço no nosso coração e você sabe disso Quem tiver dúvidas sobre, pode fechar os olhos fechados  Eu super indico. ',
+            data: '2023-12-20'
         }
+
         // Adicione mais depoimentos aqui conforme receber e aprovar
     ];
 
