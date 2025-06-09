@@ -160,6 +160,17 @@ document.addEventListener('DOMContentLoaded', function() {
             texto:'Assessora sensacional! Profissional totalmente competente, sempre disponível para dar suporte ao noivos durante todo o pré evento, durante ele e após também! Profissional que vale cada centavo do investimento!',
             data:'2025-05-17'
         },
+        
+           {
+            nome:'Andressa Bonfim',
+            texto:'Tivemos a honra dê tê-la em nosso dia também, um serviço impecável, muito cuidado, amor, atenção e comprometimento, escolheríamos mais 100000x, obrigada por tanto!',
+            data:'2025-05-17'
+        },
+        {
+            nome:'Rafael Monteiro',
+            texto:'Assessora de extrema competência, sempre pronta para tirar suas duvidas e auxiliar com TUDO que você precisará em seu evento. Tivemos o prazer de ter a Suelen na equipe de nosso casamento em set/24 RECOMENDO PARA TODOSS !! ',
+            data:'2025-05-17'
+        },
         // Adicione mais depoimentos aqui conforme receber e aprovar
     ];
 
