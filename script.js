@@ -149,7 +149,18 @@ document.addEventListener('DOMContentLoaded', function() {
             nome: 'Mariá Teixeira',
             texto: 'Deixando aqui a minha experiência com a assessoria da Suellen. Foi tudo impecável, Suellen desde o dia em que contratamos teve uma importância surreal, em contratações, negociações com nossos fornecedores e etc Sempre disponível para resolver os pepinos pré casamento. E no dia do casamento ficou 100% ali cmg, me ajudando, orientando, dizendo o que estava acontecendo, me acalmou E claro ajudou nos mínimos detalhes desse sonho  uma experiência super experiência, e um carinho enorme Mesmo ela fazendo um evento no dia anterior, foi extremamente pontual, chegou sorrindo e agilizando tudo o que era necessário. Me acompanhou até a minha entrada Su você tem um espaço no nosso coração e você sabe disso Quem tiver dúvidas sobre, pode fechar os olhos fechados  Eu super indico. ',
             data: '2023-12-20'
-        }
+        },
+           {
+            nome:'Larissa Kato',
+            texto:'Contar com a Suelen no meu casamento foi como ter um porto seguro durante todo o processo, do início ao fim. Além de todo o profissionalismo, gentileza e paciência, destaco sua transparência também: a Su é extremamente justa e transparente. Um dos momentos que mais me marcou foi perto do dia do casamento, quando bateram várias dúvidas tudo ser suficiente, contratar ou não itens extras, enfim… neste caso, a questão era sobre a contratação ou não de um telão, perguntei a opinião dela e ela me devolveu com uma outra pergunta “mas lari, você sabe o que você quer passar nesse telão? Porque ele é legal quando os noivos têm same day ou algum outro vídeo produzido. Talvez, contratar pra só passar fotos estáticas não seja tão interessante”.Dito e feito, parei pra pensar e realmente eu não tinha nada pra passar, era só o calor/desespero do momento. Isso me marcou muito, porque o fornecedor desse telão era MUITO parceiro da assessoria - e, sim, ela poderia ter me dado um empurrãozinho pra contratar e ajudar ele, mas no lugar disso me fez ponderar. Por isso digo que a Su é ju ta, ela preza pelo que é melhor para o evento e não para agradar os noivos ou fornecedor Poder confiar em alguém assim fez todo o processo ser diferente, sinto saudades dessa época e confio nela de olhos fechados até hoje 🤍.',
+            data:'2025-05-17'
+        },
+        {
+            nome:'Phelipe Lira',
+            texto:'Assessora sensacional! Profissional totalmente competente, sempre disponível para dar suporte ao noivos durante todo o pré evento, durante ele e após também! Profissional que vale cada centavo do investimento!',
+            data:
+        },
+        
 
         // Adicione mais depoimentos aqui conforme receber e aprovar
     ];
