@@ -158,10 +158,8 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             nome:'Phelipe Lira',
             texto:'Assessora sensacional! Profissional totalmente competente, sempre disponível para dar suporte ao noivos durante todo o pré evento, durante ele e após também! Profissional que vale cada centavo do investimento!',
-            data:
+            data:'2025-05-17'
         },
-        
-
         // Adicione mais depoimentos aqui conforme receber e aprovar
     ];
 
