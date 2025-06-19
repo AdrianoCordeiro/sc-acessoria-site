@@ -171,6 +171,11 @@ document.addEventListener('DOMContentLoaded', function() {
             texto:'Assessora de extrema competência, sempre pronta para tirar suas duvidas e auxiliar com TUDO que você precisará em seu evento. Tivemos o prazer de ter a Suelen na equipe de nosso casamento em set/24 RECOMENDO PARA TODOSS !! ',
             data:'2025-05-17'
         },
+         {
+            nome:'Vitor e Millena',
+            texto:'O nosso dia não poderia ser tão perfeito se não tivesse a Suelen e sua equipe nos auxiliando durante o casamento. Tivémos um imprevisto bem na semana do evento e mesmo assim ela aceitou o desafio, somos gratos pelo profissionalismo e dedicação que ela teve conosco. 05/10/2025',
+            data:'2025-06-09'
+        },
         // Adicione mais depoimentos aqui conforme receber e aprovar
     ];
 
