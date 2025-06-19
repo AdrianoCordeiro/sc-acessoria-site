@@ -4,9 +4,12 @@
     --primary-dark: #2ea83e;
     --secondary-color: #8ba052;
     --dark-color: #3a5028;
-    --light-color: #91f396;
+    --light-color: #c7fac9;
     --text-color: #333;
-    --text-light: #555;
+    --text-light: #555;git add .
+git commit -m "Atualizando projeto"
+git push origin main
+
     --white: #fff;
     --gray: #f5f5f5;
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
